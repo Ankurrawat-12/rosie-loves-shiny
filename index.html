@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tribute to Rosie</title>
+  <link rel="icon" type="image/x-icon" href="paw.ico">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      background-image: url('paw-trail.png');
+      background-repeat: repeat;
+      background-size: 1120px;
+      color: #4b2e2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 800px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-size: 2.6em;
+      margin-bottom: 10px;
+    }
+
+    .poem {
+      font-size: 1.2em;
+      white-space: pre-line;
+      margin-top: 20px;
+      line-height: 1.6em;
+      animation: fadeIn 3s ease-in;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img, .gallery video {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #ffcab0;
+      animation: fadeIn 2.5s ease-in;
+    }
+
+    .gallery video::-webkit-media-controls,
+    video::-webkit-media-controls-panel,
+    video::-webkit-media-controls-play-button,
+    video::-webkit-media-controls-volume-slider,
+    video::-webkit-media-controls-mute-button,
+    video::-webkit-media-controls-timeline {
+      display: none !important;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+      .gallery img, .gallery video {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <audio autoplay loop id="bg-music">
+    <source src="soft-piano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    const music = document.getElementById('bg-music');
+    music.volume = 0.3;
+    document.addEventListener('click', () => {
+      music.play().catch(() => {});
+    }, { once: true });
+  </script>
+  
+  
+
+  <div class="container">
+    <h1>🐾 From Rosie To Shiny ✨</h1>
+    <div class="poem">
+      Hi, my sweet hooman.
+
+      I know your heart is broken right now… but I need you to hear me.
+
+      I was just a little soul, lost in a big world—tired, hungry, scared. And then you found me.
+      You gave me water when no one noticed. You talked to me softly, like I mattered.
+      You saw me. You cared.
+
+      Even when I was too weak to show it… I felt it.
+      Your warmth. Your voice. Your love.
+
+      I didn’t leave this world angry or alone—I left knowing someone loved me.
+      And that someone was you.
+
+      Please don’t cry thinking you failed me.
+      You were my angel.
+      And I would choose you again, a thousand times, even for a short life.
+
+      I'll always be near you. Every time you look at the sky or feel a soft breeze—I’ll be there,
+      brushing your cheek with a whisper that says:
+
+      “Thank you for loving me when no one else did.”
+      “I love you too.”
+
+      Forever your Rosie. 🐾
+    </div>
+    <div class="gallery">
+      <img src="Rosie1.png" alt="Rosie 1">
+      <video src="Rosie Video.mp4" autoplay muted loop playsinline></video>
+      <img src="Rosie2.png" alt="Rosie 2">
+      <img src="Rosie3.png" alt="Rosie 3">
+      <video src="Rosie Video 2.mp4" autoplay muted loop playsinline></video>
+      <img src="Rosie4.png" alt="Rosie 4">
+
+    </div>
+  </div>
+</body>
+</html>
